@@ -14,4 +14,14 @@ Gem::Specification.new do |gem|
   gem.name          = "rsclouddns"
   gem.require_paths = ["lib"]
   gem.version       = Rsclouddns::VERSION
+
+  gem.add_dependency "httparty"
+  gem.add_dependency "hashugar"
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "guard-rspec"
+  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "turn"
+  gem.add_development_dependency "vcr"
+
 end
