@@ -1,6 +1,9 @@
+Gem for Rackspace Cloud DNS
+===========================
+
 # Rsclouddns
 
-TODO: Write a gem description
+Allows easy dns control using the Rackspace Cloud DNS API
 
 ## Installation
 
