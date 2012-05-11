@@ -5,8 +5,8 @@ module Rsclouddns
   require "json"
   require "date"
 
-  Dir[File.dirname(__FILE__) + '/rsclouddns/*rb'].each do |file|
-    require file
-  end
+ Dir[File.dirname(__FILE__) + '/rsclouddns/*rb'].each do |file|
+  require file
+ end
 
 end
