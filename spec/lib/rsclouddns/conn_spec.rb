@@ -8,6 +8,7 @@ describe Rsclouddns::Conn do
 
     it "should respond to several attrs" do 
       conn.should respond_to :authuser 
+      # need to figure out atter tests properly
     end
   end
 end
