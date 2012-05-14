@@ -2,13 +2,23 @@ require_relative '../../spec_helper'
 
 describe Rsclouddns::Conn do
 
+    before :all do
+      @conn = Rsclouddns::Conn.new(:username => 'test', :api_key => '3klj234wpeoiuczestke')
+    end
+
   describe 'initialization' do 
-    
-    let(:conn) { Rsclouddns::Conn.new(:username => 'test', :api_key => 'testkey1230234r4klj2234jlhk2j34houi') }
+
+    it "should be and instance of Conn" do 
+     @conn.should be_an_instance_of Rsclouddns::Conn 
+    end
 
     it "should respond to several attrs" do 
-      conn.should respond_to :authuser 
-      # need to figure out atter tests properly
+      @conn.should respond_to :authuser 
+      @conn.should respond_to :authkey 
+      @conn.should respond_to :authtoken 
+      @conn.should respond_to :authuser 
+      @conn.should respond_to :authuser 
     end
+
   end
 end

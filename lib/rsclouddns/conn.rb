@@ -20,7 +20,7 @@ module Rsclouddns
      @auth_url   = options["auth_url"]
      @authok     = false
      @http = {}
-     #Rsclouddns::Auth.new(self)
+     Rsclouddns::Auth.new(self)
     end
 
     def authok?

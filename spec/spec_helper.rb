@@ -12,6 +12,7 @@ Turn.config do |c|
 end
 
 VCR.configure do |c|
+  c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'spec/fixtures/rsclouddns_cassettes'
   c.hook_into :webmock
 end
