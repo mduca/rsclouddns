@@ -3,7 +3,7 @@ require_relative '../../spec_helper'
 describe Rsclouddns::Auth do
 
   before(:all) do
-   @auth = Rsclouddns::Auth.new('username', :password => "holdplace")
+   @auth = Rsclouddns::Auth.new(config("USERNAME"), :password => config("PASSWORD"))
   end
 
   describe 'global settings' do 

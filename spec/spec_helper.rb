@@ -1,3 +1,4 @@
+require_relative '../lib/rsclouddns/config.rb'
 require_relative '../lib/rsclouddns'
 
 require 'rspec'
