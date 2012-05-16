@@ -3,7 +3,7 @@ Gem for Rackspace Cloud DNS
 
 # Rsclouddns
 
-Allows easy dns control using the Rackspace Cloud DNS API
+Easy dns control using the Rackspace Cloud DNS API v2.0 BETA
 
 ## Installation
 
@@ -18,6 +18,13 @@ And then execute:
 Or install it yourself as:
 
     $ gem install rsclouddns
+
+
+## Configuration
+
+Move or copy example_config.rb to config.rb like so:
+    
+    $ cp example_config.rb config.rb
 
 ## Usage
 
