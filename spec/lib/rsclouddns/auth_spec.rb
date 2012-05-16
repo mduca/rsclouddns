@@ -2,8 +2,14 @@ require_relative '../../spec_helper'
 
 describe Rsclouddns::Auth do
 
-  before(:all) do
-   @auth = Rsclouddns::Auth.new(config("USERNAME"), :password => config("PASSWORD"))
+  before do
+    VCR.use_cassette 'auth', :record => :new_episodes do
+    @auth = Rsclouddns::Auth.new(config('USERNAME'), :password => config('PASSWORD'))
+    end
+  end
+  
+  after do
+    VCR.eject_cassette
   end
 
   describe 'global settings' do 

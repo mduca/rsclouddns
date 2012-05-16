@@ -1,5 +1,6 @@
 module Rsclouddns
 
+  require_relative "../config"
   require "rsclouddns/version"
   require "httparty"
   require "hashugar"

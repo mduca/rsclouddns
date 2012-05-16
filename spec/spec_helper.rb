@@ -1,4 +1,3 @@
-require_relative '../lib/rsclouddns/config.rb'
 require_relative '../lib/rsclouddns'
 
 require 'rspec'
@@ -16,4 +15,13 @@ VCR.configure do |c|
   c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'spec/fixtures/rsclouddns_cassettes'
   c.hook_into :webmock
+  c.filter_sensitive_data('<REDACTED>') {"#{config('USERNAME')}"} 
+  c.filter_sensitive_data('<REDACTED>') {"#{config('PASSWORD')}"} 
+  c.filter_sensitive_data('<REDACTED>') {"#{config('API_KEY')}"} 
+  c.filter_sensitive_data('<TENANTID>') {"#{config('TENANTID')}"} 
+
+  c.before_record do |i|
+    #Redacted untill proper regex are created
+    i.response.body.gsub!(/.*/,'<REDACTED>')
+  end
 end
