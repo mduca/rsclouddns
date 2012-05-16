@@ -4,7 +4,7 @@ describe Rsclouddns::Auth do
 
   before do
     VCR.use_cassette 'auth', :record => :new_episodes do
-    @auth = Rsclouddns::Auth.new(config('USERNAME'), :password => config('PASSWORD'))
+      @auth = Rsclouddns::Auth.new(config('USERNAME'), :password => config('PASSWORD'))
     end
   end
   
