@@ -3,7 +3,7 @@ require_relative '../../spec_helper'
 describe Rsclouddns::Conn do
 
     before :all do
-      @conn = Rsclouddns::Conn.new(:username => 'test', :api_key => '3klj234wpeoiuczestke')
+      @conn = Rsclouddns::Conn.new()
     end
 
   describe 'initialization' do 
