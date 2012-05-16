@@ -2,22 +2,24 @@ require_relative '../../spec_helper'
 
 describe Rsclouddns::Auth do
 
-  before :all do
-    @auth = Rsclouddns::Conn.new(:username => 'test', :api_key => '3klj234wpeoiuczestke')
+  before(:all) do
+   @auth = Rsclouddns::Auth.new('mduca', :password => "Linuxr0ckstar")
   end
 
-  describe 'initialization' do 
+  describe 'global settings' do 
     
     it "should include HTTParty" do 
       Rsclouddns::Auth.should include HTTParty
     end
 
-    it "should use auth base_uri set" do 
+
+    it "should have base_uri set" do 
       Rsclouddns::Auth.base_uri.should eq 'https://auth.api.rackspacecloud.com'
     end
 
-    it "should respond with 200" do 
-      Rsclouddns::Auth.get('/v1.1/').response.code.should eq 200.to_s
+    it "should have headers set" do 
+      Rsclouddns::Auth.headers.should be_a_kind_of Hash
+      Rsclouddns::Auth.headers.should have_key "Content-Type"
     end
   end
 end

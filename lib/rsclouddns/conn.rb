@@ -5,10 +5,10 @@ module Rsclouddns
     attr_reader   :authkey
     attr_accessor :authtoken
     attr_accessor :authok
-    attr_accessor :mgmthost
-    attr_accessor :mgmtpath
-    attr_accessor :mgmtport
-    attr_accessor :mgmtscheme
+    attr_accessor :host
+    attr_accessor :path
+    attr_accessor :port
+    attr_accessor :scheme
     attr_reader   :auth_url
     attr_reader   :region
 
@@ -20,7 +20,7 @@ module Rsclouddns
      @auth_url   = options["auth_url"]
      @authok     = false
      @http = {}
-     Rsclouddns::Auth.new(self)
+     Rsclouddns::Auth.new(@authuser, :password => '') #TODO refactor
     end
 
     def authok?
