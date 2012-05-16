@@ -21,7 +21,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('<TENANTID>') {"#{config('TENANTID')}"} 
 
   c.before_record do |i|
-    #Redacted untill proper regex are created
+    #Redacted until proper regex are created
     i.response.body.gsub!(/.*/,'<REDACTED>')
   end
 end
