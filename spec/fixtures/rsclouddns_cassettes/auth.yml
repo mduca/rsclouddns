@@ -5,7 +5,7 @@ http_interactions:
     uri: https://auth.api.rackspacecloud.com/v2.0/tokens
     body:
       encoding: UTF-8
-      string: ! '{"auth":{"passwordCredentials":{"username":"<REDACTED>","password":"<REDACTED>"}}}'
+      string: ! '{"auth":{"passwordCredentials":{"username":"[REDACTED]","password":"[REDACTED]"}}}'
     headers:
       Content-Type:
       - application/json
@@ -21,14 +21,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 16 May 2012 08:12:16 GMT
+      - Mon, 21 May 2012 19:06:59 GMT
       Connection:
       - Keep-Alive
       Content-Length:
-      - '2032'
+      - '2073'
     body:
       encoding: US-ASCII
-      string: <REDACTED><REDACTED>
+      string: ! '{"access":{"token":{"id":"[REDACTED]","expires":"2012-05-22T13:29:00.000-05:00","tenant":{"id":"[TENANTID]","name":"[TENANTID]"}},"serviceCatalog":[{"endpoints":[{"tenantId":"[TENANTID]","publicURL":"https:\/\/monitoring.api.rackspacecloud.com\/v1.0\/[TENANTID]"}],"name":"cloudMonitoring","type":"rax:monitor"},{"endpoints":[{"region":"DFW","tenantId":"[TENANTID]","publicURL":"https:\/\/dfw.databases.api.rackspacecloud.com\/v1.0\/[TENANTID]"},{"region":"ORD","tenantId":"[TENANTID]","publicURL":"https:\/\/ord.databases.api.rackspacecloud.com\/v1.0\/[TENANTID]"}],"name":"cloudDatabases","type":"rax:database"},{"endpoints":[{"tenantId":"[TENANTID]","publicURL":"https:\/\/servers.api.rackspacecloud.com\/v1.0\/[TENANTID]","versionInfo":"https:\/\/servers.api.rackspacecloud.com\/v1.0","versionList":"https:\/\/servers.api.rackspacecloud.com\/","versionId":"1.0"}],"name":"cloudServers","type":"compute"},{"endpoints":[{"tenantId":"[TENANTID]","publicURL":"https:\/\/dns.api.rackspacecloud.com\/v1.0\/[TENANTID]"}],"name":"cloudDNS","type":"dnsextension:dns"},{"endpoints":[{"region":"DFW","tenantId":"MossoCloudFS_[REDACTED]","publicURL":"https:\/\/cdn1.clouddrive.com\/v1\/MossoCloudFS_[REDACTED]"}],"name":"cloudFilesCDN","type":"rax:object-cdn"},{"endpoints":[{"region":"ORD","tenantId":"[TENANTID]","publicURL":"https:\/\/ord.loadbalancers.api.rackspacecloud.com\/v1.0\/[TENANTID]"},{"region":"DFW","tenantId":"[TENANTID]","publicURL":"https:\/\/dfw.loadbalancers.api.rackspacecloud.com\/v1.0\/[TENANTID]"}],"name":"cloudLoadBalancers","type":"rax:load-balancer"},{"endpoints":[{"region":"DFW","tenantId":"MossoCloudFS_[REDACTED]","publicURL":"https:\/\/storage101.dfw1.clouddrive.com\/v1\/MossoCloudFS_[REDACTED]","internalURL":"https:\/\/snet-storage101.dfw1.clouddrive.com\/v1\/MossoCloudFS_[REDACTED]"}],"name":"cloudFiles","type":"object-store"}],"user":{"id":"14304","roles":[{"id":"3","description":"User
+        Admin Role.","name":"identity:user-admin"}],"name":"[REDACTED]"}}}'
     http_version: 
-  recorded_at: Wed, 16 May 2012 08:12:17 GMT
+  recorded_at: Mon, 21 May 2012 19:06:59 GMT
 recorded_with: VCR 2.1.1
