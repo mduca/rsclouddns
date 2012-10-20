@@ -1,8 +1,6 @@
 Rackspace Cloud DNS Gem
 ========================
 
-# Rsclouddns
-
 Easy dns control using the Rackspace Cloud DNS API v2.0 BETA
 
 ## Installation
