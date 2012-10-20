@@ -1,5 +1,5 @@
-Gem for Rackspace Cloud DNS
-===========================
+Rackspace Cloud DNS Gem
+========================
 
 # Rsclouddns
 
